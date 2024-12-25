@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginView</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <h2>LoginView</h2>
+
+    <form action="DoLogin" method="post">
+        <div class="login-wrap">
+            <div class="login-html">
+                <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+                <input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">Forgot Password</label>
+
+                <div class="login-form">
+                    <div class="sign-in-htm">
+                        <div class="form-group">
+                            <label for="the_email">Email address</label>
+                            <input required type="email" name="the_email" class="form-control" id="the_email" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="the_password">Password</label>
+                            <input required type="password" name="the_password" class="form-control" id="the_password">
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign In">
+                        </div>
+                        <div class="hr"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <h1>AddNewUserView</h1>
+    <div class="row">
+        <div class="col">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert" style="display: none;">
+                <strong></strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col border border-info p-1 rounded">
+         
