@@ -3,50 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoginView</title>
-    <link href="styles.css" rel="stylesheet">
+    <title>Login</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <h2>LoginView</h2>
-
-    <form action="DoLogin" method="post">
-        <div class="login-wrap">
-            <div class="login-html">
-                <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-                <input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">Forgot Password</label>
-
-                <div class="login-form">
-                    <div class="sign-in-htm">
-                        <div class="form-group">
-                            <label for="the_email">Email address</label>
-                            <input required type="email" name="the_email" class="form-control" id="the_email" aria-describedby="emailHelp">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="the_password">Password</label>
-                            <input required type="password" name="the_password" class="form-control" id="the_password">
-                        </div>
-                        <div class="group">
-                            <input type="submit" class="button" value="Sign In">
-                        </div>
-                        <div class="hr"></div>
-                    </div>
-                </div>
+    <h2 id="page-title">Login</h2>
+    <img src="assets/pink-panther-vector.png"" alt="Pink Panther" class="pink-panther-img">
+    <div id="login-view" class="view">
+        <form action="DoLogin" method="post">
+            <div class="form-group">
+                <label for="the_email">Email address</label>
+                <input required type="email" name="the_email" class="form-control" id="the_email" aria-describedby="emailHelp">
             </div>
-        </div>
-    </form>
-
-    <h1>AddNewUserView</h1>
-    <div class="row">
-        <div class="col">
-            <div class="alert alert-warning alert-dismissible fade show" role="alert" style="display: none;">
-                <strong></strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+            <div class="form-group">
+                <label for="the_password">Password</label>
+                <input required type="password" name="the_password" class="form-control" id="the_password">
             </div>
-        </div>
+            <button type="submit" class="button">Sign In</button>
+            <p>
+                <a href="#" onclick="showView('signup-view')">Sign Up</a> | 
+                <a href="#" onclick="showView('forgot-password-view')">Forgot Password?</a>
+            </p>
+        </form>
     </div>
-    <div class="row">
-        <div class="col border border-info p-1 rounded">
-         
+
+    <!-- Sign-Up View -->
+    <div id="signup-view" class="view hidden">
+        <form action="DoSignUp" method="post">
+            <div class="form-group">
+                <label for="signup_email">Email address</label>
+                <input required type="email" name="signup_email" class="form-control" id="signup_email">
+            </div>
+            <div class="form-group">
+                <label for="signup_password">Password</label>
+                <input required type="password" name="signup_password" class="form-control" id="signup_password">
+            </div>
+            <button type="submit" class="button">Sign Up</button>
+            <p><a href="#" onclick="showView('login-view')">Back to Login</a></p>
+        </form>
+    </div>
+
+    <div id="forgot-password-view" class="view hidden">
+        <form action="DoForgotPassword" method="post">
+            <div class="form-group">
+                <label for="forgot_email">Enter your email to reset your password</label>
+                <input required type="email" name="forgot_email" class="form-control" id="forgot_email">
+            </div>
+            <button type="submit" class="button">Send Reset Link</button>
+            <p><a href="#" onclick="showView('login-view')">Back to Login</a></p>
+        </form>
+    </div>
+</body>
+
+<script src="script.js"></script>
+</html>
