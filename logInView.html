@@ -21,39 +21,11 @@
             </div>
             <button type="submit" class="button">Sign In</button>
             <p>
-                <a href="#" onclick="showView('signup-view')">Sign Up</a> | 
-                <a href="#" onclick="showView('forgot-password-view')">Forgot Password?</a>
+                <a href="signUp.html" onclick="showView('signup-view')">Sign Up</a> | 
+                <a href="forgotPassword.html" onclick="showView('forgot-password-view')">Forgot Password?</a>
             </p>
         </form>
     </div>
-
-    <!-- Sign-Up View -->
-    <div id="signup-view" class="view hidden">
-        <form action="DoSignUp" method="post">
-            <div class="form-group">
-                <label for="signup_email">Email address</label>
-                <input required type="email" name="signup_email" class="form-control" id="signup_email">
-            </div>
-            <div class="form-group">
-                <label for="signup_password">Password</label>
-                <input required type="password" name="signup_password" class="form-control" id="signup_password">
-            </div>
-            <button type="submit" class="button">Sign Up</button>
-            <p><a href="#" onclick="showView('login-view')">Back to Login</a></p>
-        </form>
-    </div>
-
-    <div id="forgot-password-view" class="view hidden">
-        <form action="DoForgotPassword" method="post">
-            <div class="form-group">
-                <label for="forgot_email">Enter your email to reset your password</label>
-                <input required type="email" name="forgot_email" class="form-control" id="forgot_email">
-            </div>
-            <button type="submit" class="button">Send Reset Link</button>
-            <p><a href="#" onclick="showView('login-view')">Back to Login</a></p>
-        </form>
-    </div>
-</body>
-
+   
 <script src="script.js"></script>
 </html>

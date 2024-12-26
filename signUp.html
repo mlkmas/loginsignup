@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <div class="row">
+        <div class="col border border-info p-1 rounded">
+            <form method="get" action="UserAddF1" enctype="multipart/form-data">
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="UserID">ID</label>
+                        <input required type="text" name="UserID" class="form-control" placeholder="رقم الهوية" />
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="UserName">Name</label>
+                        <input required type="text" name="UserName" class="form-control" placeholder="الاسم" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="UserEmail">Email</label>
+                        <input required type="email" name="UserEmail" class="form-control" placeholder="الايميل" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="UserAge">Age</label>
+                        <input type="number" name="UserAge" class="form-control" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="UserPassword">Password</label>
+                        <input type="password" name="UserPassword" class="form-control" placeholder="كلمة المرور" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-10">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="male" name="UserGender">
+                            <label class="form-check-label" for="UserGender">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="female" name="UserGender">
+                            <label class="form-check-label" for="UserGender">Female</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">Sign Up</button>
+            </form>
+            <div class="footer">
+                <p>Already have an account? <a href="logInView.html">Log In</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
